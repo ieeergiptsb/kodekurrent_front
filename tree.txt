@@ -1,0 +1,196 @@
+.DS_Store
+.gitignore
+components.json
+index.html
+package-lock.json
+package.json
+postcss.config.js
+public/.DS_Store
+public/Arjav Jain.jpeg
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.26.55\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.27.24\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.28.14\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.29.02\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.29.29\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.29.52\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.42.46\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.44.12\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.44.35\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.45.03\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.45.35\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.46.40\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.47.20\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.47.37\316\223\303\207\302\273PM-modified.png"
+"public/IEEE CIRCLE/Screenshot 2026-03-17 at 6.47.52\316\223\303\207\302\273PM-modified.png"
+public/Nagorao.png
+public/Nimit Jain.jpeg
+public/Screenshot 2026-03-15 203907.png
+public/Screenshot 2026-03-15 203925.png
+public/Screenshot 2026-03-15 204121.png
+public/Screenshot 2026-03-15 204134.png
+public/Screenshot 2026-03-15 204143.png
+public/WhatsApp_Image_2026-03-17_at_10.46.51_PM-removebg-preview.png
+public/creators/images/Arjav_Jain.jpeg
+public/creators/images/Arjav_Jain_Model.png
+public/creators/images/BG.jpg
+public/creators/images/Color.jpeg
+public/creators/images/Nagorao.png
+public/creators/images/Nagorao_Model.png
+public/creators/images/Nimit Jain cropped.jpeg
+public/creators/images/Nimit_Jain.jpeg
+public/creators/images/Nimit_Jain_Model.png
+public/creators/images/Ref.jpg
+public/creators/images/logo.jpeg
+public/creators/index.html
+public/creators/script.js
+public/creators/style.css
+public/favicon.png
+public/images.jpeg
+public/images/arcade-machine.png
+public/images/gallery-1_1.png
+public/images/gallery-1_2.png
+public/images/gallery-1_3.png
+public/images/hero-bg.png
+public/images/trophy.png
+public/images_k/hero-bg.jpg
+public/img_10_1771105052448.png
+public/img_11_1771105052448.png
+public/img_12_1771105052448.png
+public/img_1_1771105052443.png
+public/img_2_1771105052444.png
+public/img_3_1771105052445.png
+public/img_4_1771105052445.png
+public/img_5_1771105052446.png
+public/img_6_1771105052446.png
+public/img_7_1771105052447.png
+public/img_8_1771105052447.png
+public/img_9_1771105052447.png
+public/opengraph.jpg
+public/organizers/member1.png
+public/organizers/member10.png
+public/organizers/member11.png
+public/organizers/member12.png
+public/organizers/member13.png
+public/organizers/member14.png
+public/organizers/member15.png
+public/organizers/member2.png
+public/organizers/member3.png
+public/organizers/member4.png
+public/organizers/member5.png
+public/organizers/member6.png
+public/organizers/member7.png
+public/organizers/member8.png
+public/organizers/member9.png
+public/robots.txt
+public/sitemap.xml
+public/spaceship-airlock.jpg
+public/spaceship-bridge.jpg
+public/spaceship-cargo.jpg
+public/spaceship-corridor.jpg
+public/spaceship-engine.jpg
+public/spaceship-medbay.jpg
+public/sponser 1.jpg
+public/sponser 2.png
+public/sponser 4.png
+public/sponser 5.png
+public/sponsor 3.jpg
+src/App.jsx
+src/components/CodeRainBackground.jsx
+src/components/InteractiveGlobe.jsx
+src/components/ui/ArcadeGame.jsx
+src/components/ui/ArcadeMachine3D.jsx
+src/components/ui/CircularGallery.css
+src/components/ui/CircularGallery.jsx
+src/components/ui/ElectricBorder.css
+src/components/ui/ElectricBorder.jsx
+src/components/ui/EvilEye.css
+src/components/ui/EvilEye.jsx
+src/components/ui/FuzzyText.jsx
+src/components/ui/GridScan.css
+src/components/ui/HUDOverlay.jsx
+src/components/ui/LabyrinthBackground.css
+src/components/ui/LabyrinthBackground.jsx
+src/components/ui/RocketSplash.css
+src/components/ui/RocketSplash.jsx
+src/components/ui/SciFiBackground.css
+src/components/ui/SciFiBackground.jsx
+src/components/ui/SciFiSplashScreen.css
+src/components/ui/SciFiSplashScreen.jsx
+src/components/ui/Shuffle.css
+src/components/ui/Shuffle.jsx
+src/components/ui/SpaceshipSplash.css
+src/components/ui/SpaceshipSplash.jsx
+src/components/ui/TargetCursor.css
+src/components/ui/TargetCursor.jsx
+src/components/ui/accordion.jsx
+src/components/ui/alert-dialog.jsx
+src/components/ui/alert.jsx
+src/components/ui/aspect-ratio.jsx
+src/components/ui/avatar.jsx
+src/components/ui/badge.jsx
+src/components/ui/breadcrumb.jsx
+src/components/ui/button-group.jsx
+src/components/ui/button.jsx
+src/components/ui/calendar.jsx
+src/components/ui/card.jsx
+src/components/ui/carousel.jsx
+src/components/ui/chart.jsx
+src/components/ui/checkbox.jsx
+src/components/ui/collapsible.jsx
+src/components/ui/command.jsx
+src/components/ui/context-menu.jsx
+src/components/ui/cursor.jsx
+src/components/ui/dialog.jsx
+src/components/ui/drawer.jsx
+src/components/ui/dropdown-menu.jsx
+src/components/ui/empty.jsx
+src/components/ui/field.jsx
+src/components/ui/form.jsx
+src/components/ui/hover-card.jsx
+src/components/ui/input-group.jsx
+src/components/ui/input-otp.jsx
+src/components/ui/input.jsx
+src/components/ui/item.jsx
+src/components/ui/kbd.jsx
+src/components/ui/label.jsx
+src/components/ui/menubar.jsx
+src/components/ui/navigation-menu.jsx
+src/components/ui/pagination.jsx
+src/components/ui/popover.jsx
+src/components/ui/progress.jsx
+src/components/ui/radio-group.jsx
+src/components/ui/resizable.jsx
+src/components/ui/scroll-area.jsx
+src/components/ui/select.jsx
+src/components/ui/separator.jsx
+src/components/ui/sheet.jsx
+src/components/ui/sidebar.jsx
+src/components/ui/skeleton.jsx
+src/components/ui/slider.jsx
+src/components/ui/sonner.jsx
+src/components/ui/spinner.jsx
+src/components/ui/switch.jsx
+src/components/ui/table.jsx
+src/components/ui/tabs.jsx
+src/components/ui/textarea.jsx
+src/components/ui/toast.jsx
+src/components/ui/toaster.jsx
+src/components/ui/toggle-group.jsx
+src/components/ui/toggle.jsx
+src/components/ui/tooltip.jsx
+src/hooks/use-mobile.jsx
+src/hooks/use-toast.js
+src/index.css
+src/lib/queryClient.js
+src/lib/utils.js
+src/main.jsx
+src/pages/Dashboard.jsx
+src/pages/Register.jsx
+src/pages/SignIn.jsx
+src/pages/TeamRegistration.jsx
+src/pages/VerifyTeam.jsx
+src/pages/not-found.jsx
+tsconfig.json
+vercel.json
+vite-plugin-meta-images.js
+vite.config.js
