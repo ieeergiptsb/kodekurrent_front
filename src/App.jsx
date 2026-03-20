@@ -11,6 +11,7 @@ import SignIn from "@/pages/SignIn";
 import Register from "@/pages/Register";
 import Dashboard from "@/pages/Dashboard";
 import TeamRegistration from "@/pages/TeamRegistration";
+import VerifyTeam from "@/pages/VerifyTeam";
 import TargetCursor from "@/components/ui/TargetCursor";
 import SciFiBackground from "@/components/ui/SciFiBackground";
 import RocketSplash from "@/components/ui/RocketSplash";
@@ -47,6 +48,7 @@ function Router() {
           <Route path="/register-team">
             <Protected component={TeamRegistration} />
           </Route>
+          <Route path="/verify-team" component={VerifyTeam} />
           <Route component={NotFound} />
         </Switch>
       </motion.div>

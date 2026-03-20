@@ -187,7 +187,9 @@ export default function Dashboard() {
                                 <div className="flex items-center justify-between mb-6">
                                     <div>
                                         <h2 className="font-pixel text-secondary text-xl">{team.team_name}</h2>
-                                        <p className="font-mono text-muted-foreground text-sm mt-1">{team.members.length} members — {team.is_submitted ? "✅ Submitted" : "⏳ Not Submitted"}</p>
+                                        <p className="font-mono text-muted-foreground text-sm mt-1">
+                                            {team.members.length} members — {team.members.every(m => m.status === 'Verified') ? "✅ Verified" : "⏳ Pending Verification"}
+                                        </p>
                                     </div>
                                     {team.submission_url && (
                                         <a href={team.submission_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 font-mono text-sm text-secondary hover:underline">
@@ -199,14 +201,18 @@ export default function Dashboard() {
                                     {team.members.map((m, i) => (
                                         <div key={i} className="flex items-center gap-3 bg-secondary/5 rounded-lg p-3 border border-secondary/10">
                                             <div className="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center font-pixel text-secondary text-xs">
-                                                {m.full_name?.[0]?.toUpperCase()}
+                                                {m.full_name?.[0]?.toUpperCase() || m.email[0].toUpperCase()}
                                             </div>
                                             <div>
-                                                <p className="font-mono text-sm text-white">{m.full_name}</p>
+                                                <p className="font-mono text-sm text-white">{m.full_name || "Waiting to join..."}</p>
                                                 <p className="font-mono text-xs text-muted-foreground">{m.email}</p>
                                             </div>
-                                            {m.user?.toString() === team.team_lead?.toString() && (
-                                                <span className="ml-auto font-mono text-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded-full">Lead</span>
+                                            {m.status === "Pending" ? (
+                                                <span className="ml-auto font-mono text-xs text-yellow-500 bg-yellow-500/10 px-2 py-0.5 rounded-full border border-yellow-500/20">Pending</span>
+                                            ) : m.user?.toString() === team.team_lead?.toString() ? (
+                                                <span className="ml-auto font-mono text-xs text-secondary bg-secondary/10 px-2 py-0.5 rounded-full border border-secondary/20">Lead</span>
+                                            ) : (
+                                                <span className="ml-auto font-mono text-xs text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">Verified</span>
                                             )}
                                         </div>
                                     ))}

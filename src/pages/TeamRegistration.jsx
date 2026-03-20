@@ -59,7 +59,7 @@ export default function TeamRegistration() {
             const data = await res.json();
 
             if (res.ok && data.success) {
-                toast.success("Team Registered!", { description: `Welcome, Team ${teamName}!` });
+                toast.success("Invitations Sent!", { description: "Your teammates need to verify their emails." });
                 setLocation("/dashboard");
             } else {
                 toast.error("Team Registration Failed", { description: data.error || "Please try again." });
