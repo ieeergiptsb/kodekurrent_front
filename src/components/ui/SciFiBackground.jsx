@@ -19,7 +19,9 @@ const SciFiBackground = () => {
 
     // Use MotionValues for smooth interaction
     const { scrollY } = useScroll();
-    const bgX = useTransform(scrollY, [0, 5000], ["50%", "100%"]);
+    // Instead of backgroundPositionX (which causes repaints), we use x (translate3d) which is GPU accelerated
+    // We map scroll from 0-5000px to move the background horizontally by -5vw to 5vw
+    const bgX = useTransform(scrollY, [0, 5000], ["-5vw", "5vw"]);
     
     const mouseX = useMotionValue(0.5);
     const mouseY = useMotionValue(0.5);
@@ -116,7 +118,9 @@ const SciFiBackground = () => {
                         className="scifi-bg-layer"
                         style={{
                             backgroundImage: sectionImages[activeSection] ? `url("${sectionImages[activeSection]}")` : 'none',
-                            backgroundPositionX: bgX,
+                            x: bgX,
+                            width: "110vw", /* Extra width to allow translation without edges showing */
+                            left: "-5vw",
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
