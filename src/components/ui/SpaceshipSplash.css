@@ -1,0 +1,112 @@
+.spaceship-splash-root {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #1a0b2e 0%, #05010a 100%);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.star-container {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.launch-pad {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.spaceship-wrapper {
+    position: relative;
+    width: 200px;
+    z-index: 10;
+}
+
+.spaceship-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.4));
+}
+
+.engine-glow {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 40px;
+    background: radial-gradient(circle, #f43f5e 20%, transparent 80%);
+    filter: blur(10px);
+    z-index: -1;
+}
+
+.launch-ui {
+    margin-top: 4rem;
+    text-align: center;
+    z-index: 20;
+}
+
+.skip-btn {
+    position: absolute;
+    bottom: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 100;
+}
+
+/* Background speed lines (only during launch) */
+.spaceship-splash-root::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to bottom, transparent 95%, rgba(255, 255, 255, 0.1) 95%);
+    background-size: 100% 20px;
+    pointer-events: none;
+    opacity: 0;
+    animation: none;
+}
+
+.spaceship-splash-root:has(.launching) ::after {
+    opacity: 1;
+    animation: speedLines 0.1s linear infinite;
+}
+
+@keyframes speedLines {
+    from {
+        background-position-y: 0;
+    }
+
+    to {
+        background-position-y: 20px;
+    }
+}

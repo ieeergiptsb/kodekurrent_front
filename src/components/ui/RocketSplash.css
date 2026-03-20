@@ -1,0 +1,188 @@
+.rocket-splash-root {
+    position: fixed;
+    inset: 0;
+    background-color: #05010a;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.rocket-starfield {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.rocket-star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: rocket-twinkle 1s infinite alternate;
+}
+
+@keyframes rocket-twinkle {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 0.8;
+    }
+}
+
+.rocket-launch-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.rocket-vessel-wrapper {
+    position: relative;
+    width: 400px;
+    /* Base width */
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rocket-vessel-img {
+    width: 150%;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(129, 145, 185, 0.4));
+}
+
+.dual-thrusters {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    z-index: -1;
+}
+
+.rocket-thrust {
+    width: 60px;
+    height: 180px;
+    background: linear-gradient(to bottom, #f43f5e, #fb923c, transparent);
+    filter: blur(10px);
+    border-radius: 50% / 100% 100% 0 0;
+}
+
+.rocket-thrust.left {
+    transform: rotate(5deg);
+}
+
+.rocket-thrust.right {
+    transform: rotate(-5deg);
+}
+
+.rocket-engine-glow {
+    position: absolute;
+    bottom: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #f43f5e 0%, transparent 70%);
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.rocket-engine-glow.IGNITION {
+    opacity: 1;
+    box-shadow: 0 0 50px #f43f5e;
+}
+
+.rocket-hud {
+    position: absolute;
+    bottom: 15%;
+    text-align: center;
+    color: #8191b9;
+    z-index: 30;
+}
+
+.hud-countdown {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 20px rgba(129, 145, 185, 0.5);
+}
+
+.hud-line {
+    width: 200px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8191b9, transparent);
+    margin: 1rem auto;
+}
+
+.hud-status {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    opacity: 0.7;
+}
+
+.rocket-skip-btn {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: rgba(129, 145, 185, 0.3);
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    cursor: pointer;
+    transition: color 0.3s, opacity 0.3s;
+    z-index: 100;
+}
+
+.rocket-skip-btn:hover {
+    color: #8191b9;
+    opacity: 1;
+}
+
+.launch-flash {
+    position: absolute;
+    inset: 0;
+    background: white;
+    z-index: 4000;
+    pointer-events: none;
+}
+
+/* Speed lines effect during launch */
+.rocket-splash-root::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 98%,
+            rgba(255, 255, 255, 0.05) 98%,
+            rgba(255, 255, 255, 0.05) 100%);
+    background-size: 100% 20px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rocket-splash-root:has(.LAUNCHING) ::before {
+    opacity: 1;
+    animation: rocket-speed-lines 0.05s linear infinite;
+}
+
+@keyframes rocket-speed-lines {
+    from {
+        background-position-y: 0;
+    }
+
+    to {
+        background-position-y: 20px;
+    }
+}

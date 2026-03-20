@@ -1,0 +1,52 @@
+.labyrinth-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background-color: #05010a;
+    overflow: hidden;
+}
+
+.labyrinth-grid {
+    position: absolute;
+    inset: -100px;
+    background-image:
+        linear-gradient(to right, rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: center top;
+    animation: gridMove 20s linear infinite;
+    will-change: transform;
+}
+
+.labyrinth-scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.15) 0px,
+            rgba(0, 0, 0, 0.15) 1px,
+            transparent 1px,
+            transparent 2px);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.labyrinth-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(5, 1, 10, 0.8) 80%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes gridMove {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(0);
+    }
+
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(50px);
+    }
+}
