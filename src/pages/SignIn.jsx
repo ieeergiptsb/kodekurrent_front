@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+
 export default function SignIn() {
     const [, setLocation] = useLocation();
     const [loading, setLoading] = useState(false);
@@ -19,8 +21,7 @@ export default function SignIn() {
         setLoading(true);
 
         try {
-            const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api";
-            const response = await fetch(`${baseUrl}/auth/signin`, {
+            const response = await fetch(`${API_BASE}/auth/login`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
@@ -28,13 +29,13 @@ export default function SignIn() {
 
             const data = await response.json();
 
-            if (response.ok) {
-                localStorage.setItem("token", data.token);
-                localStorage.setItem("user", JSON.stringify(data.user));
+            if (response.ok && data.success) {
+                localStorage.setItem("kk_token", data.access_token);
+                localStorage.setItem("kk_user", JSON.stringify(data.user));
                 toast.success("Login Successful", { description: "Welcome back to KodeKurrent!" });
-                setLocation("/");
+                setLocation("/dashboard");
             } else {
-                toast.error("Login Failed", { description: data.message || "Invalid credentials" });
+                toast.error("Login Failed", { description: data.error || "Invalid credentials" });
             }
         } catch (error) {
             console.error("Login Error:", error);
@@ -103,7 +104,7 @@ export default function SignIn() {
                     <div className="mt-8 text-center border-t border-primary/20 pt-6">
                         <p className="font-mono text-sm text-muted-foreground">
                             New to the grid?{" "}
-                            <Link href="/signup">
+                            <Link href="/register">
                                 <span className="text-secondary hover:text-white transition-colors cursor-pointer border-b border-transparent hover:border-white pb-0.5">
                                     Register Here
                                 </span>
